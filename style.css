@@ -1,0 +1,60 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #0b1020;
+  color: #eef2ff;
+}
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(11,16,32,.95);
+  border-bottom: 1px solid #27304a;
+}
+.nav {
+  max-width: 1100px; margin: auto; padding: 16px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo { font-size: 24px; font-weight: 800; }
+.links { display: flex; gap: 20px; flex-wrap: wrap; }
+.links a { color: #dbe4ff; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+.hero {
+  min-height: 88vh; display: flex; align-items: center;
+  max-width: 1100px; margin: auto; padding: 70px 20px;
+}
+.tag { color: #a9b8ff; font-weight: 700; margin-bottom: 12px; }
+h1 { font-size: clamp(42px, 8vw, 72px); line-height: 1.05; max-width: 900px; }
+h1 span { display: block; }
+.intro { max-width: 700px; margin: 24px 0; color: #b9c2da; font-size: 19px; }
+.buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 12px 20px; border-radius: 10px;
+  background: #ffffff; color: #0b1020; text-decoration: none; font-weight: 700;
+}
+.btn.outline { background: transparent; color: #fff; border: 1px solid #6573a3; }
+
+.section { max-width: 1100px; margin: auto; padding: 80px 20px; }
+.section h2 { font-size: 36px; margin-bottom: 22px; }
+.section > p { color: #b9c2da; max-width: 800px; }
+.cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px;
+}
+.card, .education, .project {
+  padding: 24px; border: 1px solid #293451; border-radius: 16px;
+  background: #11182c;
+}
+.card p, .education p, .project p { color: #b9c2da; margin-top: 7px; }
+.tech { font-weight: 700; }
+.note { margin-top: 18px; color: #8995b7 !important; }
+.contact { text-align: center; }
+.contact > p { margin: 0 auto 20px; }
+.username { margin-top: 20px !important; }
+footer { text-align: center; padding: 30px 20px; border-top: 1px solid #27304a; color: #8995b7; }
+
+@media (max-width: 700px) {
+  .nav { align-items: flex-start; gap: 12px; flex-direction: column; }
+  .links { gap: 12px; }
+  .hero { min-height: 75vh; }
+}
